@@ -1,6 +1,3 @@
-# Frontend Mentor - Recipe page
-
-![Design preview for the Recipe page coding challenge](./preview.jpg)
 # 🍳 Recipe Page - Frontend Mentor Challenge
 
 ![Preview del proyecto](./preview.jpg) <!-- Añade una imagen preview si tienes -->
