@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Colors */
+
+:root {
+    /* Neutrales */
+    --white: hsl(0, 0%, 100%);
+    
+    /* Stone */
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    
+    /* Brown */
+    --brown-800: hsl(14, 45%, 36%);
+    
+    /* Rose */
+    --rose-50: hsl(330, 100%, 98%);
+    --rose-800: hsl(332, 51%, 32%);
+
+     /* Background preparation-time */
+     --preparation-time-background: hsla(332, 86%, 84%, 0.155);
+  }
+  
+  body {
+    background-color: var(--white);
+    color: var(--stone-900);
+    margin: 0 auto;
+    width: 1200px;
+    font-family: 'Outfit', sans-serif; /* Fuente principal */
+    font-weight: 400; /* Peso por defecto */
+    color: var(--stone-900);
+  }
+
+  header {
+    margin: 30px 0px 50px 0px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  header img {
+    animation: slideFadeIn 0.8s ease-in forwards;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 16px;
+
+  }
+  @keyframes slideFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Desplaza desde abajo */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  header h1 {
+   font-family: 'Young Serif', serif; /* Fuente para el título */
+   font-size: 67px;
+  }
+  header p {
+    font-size: 20px;
+    color: var(--stone-600);
+  }
+ 
+  .preparation-time {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 12px;
+    background-color: var(--preparation-time-background);
+    margin-bottom: 40px;
+    color: var(--stone-900);
+
+  }
+  .preparation-time h2 {
+  color: var(--rose-800);
+
+  }
+  .preparation-time ul {
+    margin: 15px 0px 0px 30px;
+  }
+.preparation-time ul li {
+    padding-left: 15px;
+    margin-top: 10px;
+    color: var(--stone-600);
+
+}
+
+.preparation-time ul li::marker {
+    color: var(--rose-800); 
+}
+.ingredients {
+    font-family: 'Young Serif', serif; /* Fuente para el título */
+}
+.ingredients h2 {
+    font-size: 35px;
+    color: var(--brown-800);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.ingredients ul {
+    margin: 0px 0px 0px 30px;
+}
+
+.ingredients ul li {
+    font-family: 'Outfit', sans-serif; /* Fuente principal */
+    padding-left: 15px;
+    margin-top: 10px;
+    color: var(--stone-900);
+}
+.ingredients ul li::marker {
+    color: var(--rose-800);
+    
+}
+
+.mi-separador {
+    margin: 30px 0px;;
+    background-color: var(--stone-900); /* Color (puede ser tu stone-150: hsl(30, 18%, 87%)) */
+    
+  }
+.instructions {
+    margin-bottom: 30px;
+}
+
+.instructions h2 {
+    font-family: 'Young Serif', serif; /* Fuente para el título */
+    font-size: 35px;
+    color: var(--brown-800);
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.instructions ol {
+    margin: 15px 0px 0px 30px;
+  }
+
+.instructions ol li {
+    padding-left: 15px;
+    margin-top: 10px;
+    color: var(--stone-600);
+
+}
+
+.instructions ol li::marker {
+    color: var(--rose-800); 
+    font-weight: 900;
+}
+
+.nutrition h2{
+    font-family: 'Young Serif', serif; /* Fuente para el título */
+    font-size: 35px;
+    color: var(--brown-800);
+    font-weight: 300;
+    margin-bottom: 20px;
+
+}
+.nutrition p {
+    margin-bottom: 20px;
+}
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+.nutrition th, .nutrition td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #b8b8b8;
+    font-weight: 400;
+}
+.nutrition th {
+    padding-left: 50px;
+   
+}
+.nutrition td {
+    font-weight: 600;
+    color: var(--rose-800);
+    font-weight: 900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
+    header {
+        margin:0px;
+        gap: 20px;
+    }
+    header img {
+        border-radius: 0px;
+        width: 100%;
+        height: auto;
+        padding: 0px;
+        
+
+    }
+    header h1 {
+        font-size: 40px;
+        margin: 0px 20px;
+    }
+    header p {
+        font-size: 20px;
+        margin: 20px 20px 40px 20px;
+    }
+    .preparation-time, .ingredients, .instructions, .nutrition {
+        padding: 20px;
+        margin: 20px 20px;
+    }
+    .preparation-time h2, .ingredients h2, .instructions h2, .nutrition h2 {
+        font-size: 28px;
+        margin: 0px 20px;
+    }
+    .nutrition p {
+        margin: 20px 20px 30px 20px;
+    }
+    .mi-separador {
+        margin: 20px 20px;
+    }
+}
